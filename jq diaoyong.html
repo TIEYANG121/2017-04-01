@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		.bg{
+			background-color: blue;
+			color:#fff;
+			/*width: 300px;
+			height: 200px;*/
+		}
+	</style>
+</head>
+<body>
+	<button class="bg">按钮1</button>
+	<button class="bg">按钮2</button>
+	<button class="bg">按钮3</button>
+	<button class="bg">按钮4</button>
+	<script src="jq.js"></script>
+	<script>
+		var btn =new $('button');
+		// btn.click(function(){
+		// 	alert("喵喵")
+		// })
+		btn.click(function(){
+			console.log(this)
+		})
+		btn.click(function(){
+			console.log("sha")
+		})
+
+	</script>
+</body>
+</html>

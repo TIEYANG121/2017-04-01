@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+	function Animal(){};
+	Animal.prototype.eat = function() {
+		alert("吃") 
+	};
+	function cat(){};
+
+	cat.prototype=new Animal();
+	cat.prototype.drink=function(){
+		alert("喝")
+	}
+	var cat = new cat();
+	cat.eat();    
+	</script>
+</body>
+</html>

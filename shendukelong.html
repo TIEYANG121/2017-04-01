@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		var obj = {
+			name:'miaomiao',
+			age:2,
+			sex:'male',
+			friends:["超人","蝙蝠强"]
+		}
+
+		function clone(opi) {
+			var newObj = opi instanceof Array ? [] :{}
+
+			for(var i in opi){
+				
+				if(typeof(opi[i]) !== "object") {
+					newObj[i] = opi[i]
+				}else{
+					newObj[i] = clone(opi[i])
+				}
+
+		}
+		return newObj;	
+	}
+		var newobj=clone(obj)
+
+		newobj.friends.push("绿巨人")
+
+		console.log(obj);
+		console.log(newobj);
+		
+	</script>
+</body>
+</html>

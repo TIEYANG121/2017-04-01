@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		var obj = {
+			name:'miaomiao',
+			age:2,
+			sex:'male',
+			frends:["超人","蝙蝠强"]
+		}
+		function clong(opi) {
+			var newObj={} 
+			for(var i in opi){
+			newObj[i] = opi[i]
+		}
+			return newObj;
+		}
+		var newObj=clong(obj)
+		newObj.name="二哈";
+		console.log(obj);
+		console.log(newObj);
+
+	</script>
+</body>
+</html>
